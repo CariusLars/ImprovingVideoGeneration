@@ -78,7 +78,7 @@ Building on Progressively Growing GANs (PGGANs) \cite{Karras2018}, Aigner and K\
 	\caption{3D-convolutional video generation pipeline adapted from \cite{Aigner2019}. 6 RGB/RGB-D frames serve as conditioning input, the network generates the consecutive 6 RGB/RGB-D frames. Every 20 epochs, encoder and decoder are grown to learn features on all resolutions (see \cite{Karras2018})}
 	\label{fig:futuregan}
 \end{figure}
-explicit modeling of back- and foreground dynamics to achieve spatio-temporal consistency \cite{Vondrick2016}. None of the approaches consider using depth information. \\
+explicit modeling of back- and foreground dynamics to achieve spatio-temporal consistency \cite{Vondrick2016}. The approaches do not consider using depth information. \\
 In other research, the low-dimensional latent manifold of GANs has been widely used to interpolate between generated images \cite{Karras2018}. Zhu {\em et\ al.} use encoded spatial properties to morph images based on user suggestions \cite{Zhu2016}, Chen {\em et\ al.} \cite{Chen2019} propose additional methods to manipulate specific properties of generated faces.
 \begin{figure*}[]
 	\centering
