@@ -8,3 +8,7 @@ Our code is based on the [FutureGAN](https://github.com/TUM-LMF/FutureGAN) imple
 Colab Scripts:
 - FutureGAN_Depth/Training_Depth.ipynb
 ## Latent Space Video Generation
+Colab Scripts:
+- LSVG/Train_WGAN_GP.ipynb
+- LSVG/Pipeline.ipynb
+- LSVG/Train_Pnet.ipynb

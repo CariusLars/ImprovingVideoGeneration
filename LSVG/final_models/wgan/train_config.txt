@@ -1,0 +1,6 @@
+------------- training configuration -------------
+dataset: /content/gdrive/My Drive/ADL4CV/Code_LSVG/
+num_epochs: 100
+random_seed: 1
+log_dir: /content/gdrive/My Drive/ADL4CV/Code_LSVG/Logs/
+model_dir: /content/gdrive/My Drive/ADL4CV/Code_LSVG/Logs/20.01.2020-18:11:19/models
