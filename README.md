@@ -42,4 +42,6 @@ We propose the following steps for synthesizing videos conditioned on a set of i
 ### Results
 While our approach worked well in general, the latent space of our trained GAN was not perfectly smooth, so some digit changes are observed in the generated sequences. Below are four sequences (10 generated frames) with 3 input frames from the testset each. 
 
-![ ](./graphics/LSVG/1.gif  "Result Sequence") ![ ](./graphics/LSVG/444.gif  "Result Sequence") ![ ](./graphics/LSVG/460.gif  "Result Sequence") ![ ](./graphics/LSVG/850.gif  "Result Sequence") 
+![ ](./graphics/LSVG/1.gif =80x "Result Sequence") ![ ](./graphics/LSVG/444.gif  "Result Sequence") ![ ](./graphics/LSVG/460.gif  "Result Sequence") ![ ](./graphics/LSVG/850.gif  "Result Sequence") 
+
+<img src="./graphics/LSVG/1.gif" alt="drawing" style="width:80px;"/>
