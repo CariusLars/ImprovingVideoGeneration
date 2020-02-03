@@ -71,14 +71,12 @@ Synthesizing high-resolution videos is a highly relevant topic for commercial ap
 \section{Related Work}
 Generative Adversarial Networks have been shown to generate high-resolution images that are indistinguishable from real photographs to the human eye \cite{Karras2018a, Karras2018}. The domain of synthesizing coherent high-resolution videos of considerable length remains an open challenge.\\% generation is a substantially harder task that is tackled in current research.\\
 BigGAN \cite{Brock2018}, a large architecture for image synthesis, was extended to video generation by Clark {\em et\ al.} using Recurrent Neural Network (RNN) blocks and separate discriminators for spatial and temporal consistency \cite{Clark2019}. 
-Building on Progressively Growing GANs (PGGANs) \cite{Karras2018}, Aigner and K\"orner used 3D-convolutions to synthesize video sequences conditioned on input frames \cite{Aigner2019}. Other approaches include 
-\begin{figure}[H]
+Building on Progressively Growing GANs (PGGANs) \cite{Karras2018}, Aigner and K\"orner used 3D-convolutions to synthesize video sequences conditioned on input frames \cite{Aigner2019}. Other approaches include \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{graphics/FutureGAN/FutureGAN.png}
 	\caption{3D-convolutional video generation pipeline adapted from \cite{Aigner2019}. 6 RGB/RGB-D frames serve as conditioning input, the network generates the consecutive 6 RGB/RGB-D frames. Every 20 epochs, encoder and decoder are grown to learn features on all resolutions (see \cite{Karras2018})}
 	\label{fig:futuregan}
-\end{figure}
-explicit modeling of back- and foreground dynamics to achieve spatio-temporal consistency \cite{Vondrick2016}. The approaches do not consider using depth information. \\
+\end{figure} explicit modeling of back- and foreground dynamics to achieve spatio-temporal consistency \cite{Vondrick2016}. The approaches do not consider using depth information. \\
 In other research, the low-dimensional latent manifold of GANs has been widely used to interpolate between generated images \cite{Karras2018}. Zhu {\em et\ al.} use encoded spatial properties to morph images based on user suggestions \cite{Zhu2016}, Chen {\em et\ al.} \cite{Chen2019} propose additional methods to manipulate specific properties of generated faces.
 \begin{figure*}[]
 	\centering
@@ -101,7 +99,7 @@ We tested the hypothesis of depth information improving the synthesized video qu
 
 \subsection{Latent Space Video Generation}
 
-We performed video synthesis on MovingMNIST by fitting curves to the latent manifold of a GAN. We propose critic-correction as a postprocessing method for the generated video. Conditioning on input frames is incorporated by backprojecting given images into latent space utilizing optimization techniques and a projection network, the entire pipeline is visualized in figure \ref{fig:lsvg}.
+We performed video synthesis on MovingMNIST by fitting curves to the latent manifold of a GAN. We propose critic-correction as a postprocessing method for the generated video. Conditioning on input frames is incorporated by backprojecting given images into latent space utilizing optimization techniques and a projection network. The entire pipeline is visualized in figure \ref{fig:lsvg}.
 
 \subsubsection{GAN-Architecture} 
 We adapted the DCGAN architecture of \cite{DCGAN} to incorporate the WGAN-GP loss of \cite{Gulrajani2017}. This remedies the diligent training of standard GANs. We used instance normalization \cite{INST} to render the network agnostic to high contrast images found in MovingMNIST. 
